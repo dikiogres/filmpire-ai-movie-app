@@ -15,6 +15,17 @@ export interface CarProps {
   year: number;
 }
 
+export interface FilterProps {
+  manufacturer?: string;
+  year?: string | number;
+  model?: string;
+  limit?: number;
+  fuel?: string;
+}
+
+export interface HomeProps {
+  searchParams: FilterProps;
+}
 export interface SearchManuFacturerProps {
   manufacturer: string;
   setManuFacturer: (manufacturer: string) => void;
