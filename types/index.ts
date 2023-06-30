@@ -1,5 +1,10 @@
 import { MouseEventHandler } from "react";
 
+export interface SearchManuFacturerProps {
+  manufacturer: string;
+  setManuFacturer: (manufacturer: string) => void;
+}
+
 export interface CustomButtonProps {
   isDisabled?: boolean;
   btnType?: "button" | "submit";
