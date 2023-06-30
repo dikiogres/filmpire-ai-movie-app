@@ -4,11 +4,12 @@ import SearchBar from "@/components/SearchBar";
 import Image from "next/image";
 import { fetchCars } from "@/utils";
 import { HomeProps } from "@/types";
+import { fuels, yearsOfProduction } from "@/constants";
 
 export default async function Home({ searchParams }: HomeProps) {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
-    year: searchParams.year || "",
+    year: searchParams.year || 2022,
     fuel: searchParams.fuel || "",
     limit: searchParams.limit || 10,
     model: searchParams.model || "",
@@ -30,8 +31,8 @@ export default async function Home({ searchParams }: HomeProps) {
           <SearchBar />
 
           <div className="home__filter-container">
-            {/* <CustomFilter title='fuel' options={fuels} />
-            <CustomFilter title='year' options={yearsOfProduction} /> */}
+            <CustomFilter title="fuel" options={fuels} />
+            <CustomFilter title="year" options={yearsOfProduction} />
           </div>
         </div>
 

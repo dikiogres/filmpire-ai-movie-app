@@ -26,6 +26,7 @@ export interface FilterProps {
 export interface HomeProps {
   searchParams: FilterProps;
 }
+
 export interface SearchManuFacturerProps {
   manufacturer: string;
   setManuFacturer: (manufacturer: string) => void;
